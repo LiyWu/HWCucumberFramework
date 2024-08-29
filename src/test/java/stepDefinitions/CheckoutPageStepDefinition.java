@@ -9,11 +9,9 @@ import utils.TestContextSetup;
 
 public class CheckoutPageStepDefinition {
     TestContextSetup testContextSetup;
-    public WebDriver driver;
     public CheckoutPage checkoutPage;
     public CheckoutPageStepDefinition(TestContextSetup testContextSetup)
     {
-        WebDriver driver = new ChromeDriver();
         this.testContextSetup = testContextSetup;
         checkoutPage = testContextSetup.pagebjectManager.getCheckoutPage();
     }
