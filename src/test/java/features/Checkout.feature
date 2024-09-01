@@ -14,4 +14,4 @@ Feature: Search and Place the order for products
     Examples:
       | Name |
       | Tom  |
-      | BeetTest |
+      | Beet |

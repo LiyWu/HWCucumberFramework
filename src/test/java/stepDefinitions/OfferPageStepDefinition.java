@@ -14,19 +14,20 @@ import java.util.Set;
 public class OfferPageStepDefinition {
     String offerpageProductName;
 
+    OffersPage offersPage;
     TestContextSetup testContextSetup;
 
-    public OfferPageStepDefinition()
+    public OfferPageStepDefinition(TestContextSetup testContextSetup)
     {
         this.testContextSetup = testContextSetup;
+        offersPage = testContextSetup.pagebjectManager.getOffersPage();
     }
     @Then("^user searched for (.+) shortname in offers page$")
     public void user_search_for_same_shortname_in_offers_page(String shortName) {
 
         switchToOffersPage();
-        OffersPage offersPage = testContextSetup.pagebjectManager.getOffersPage();
         offersPage.searchItem(shortName);
-      //  testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table//tbody/tr/td[1]")));
+        testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table//tbody/tr/td[1]")));
         offerpageProductName =offersPage.getProductName();
         System.out.println(offerpageProductName + " is extracted from offer Page");
     }

@@ -15,7 +15,6 @@ public class Hooks {
     TestContextSetup testContextSetup;
     public Hooks(TestContextSetup testContextSetup)
     {
-
         this.testContextSetup=testContextSetup;
     }
     @After

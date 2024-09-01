@@ -34,10 +34,10 @@ public class LandingPageStepDefinition {
 
 
         lp.searchItem(shortname);
-      //  testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[@class='product-name']")));
+        testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[@class='product-name']")));
         Thread.sleep(2000);
-        /*testContextSetup.productName = lp.getSearchText().split("-")[0].trim();
-        System.out.println(testContextSetup.productName + " is extracted from Home Page");*/
+        testContextSetup.productName = lp.getSearchText().split("-")[0].trim();
+        System.out.println(testContextSetup.productName + " is extracted from Home Page");
     }
 
     @When("Added {string} items of the selected product to cart")
