@@ -15,10 +15,10 @@ import java.io.IOException;
 
 public class HTTPClient {
     CloseableHttpClient httpClient;
-    /*public HTTPClient()
+    public HTTPClient()
     {
-        CloseableHttpClient httpClient = HttpClients.createDefault();
-    }*/
+        httpClient = HttpClients.createDefault();
+    }
     public String getGetResponse(String url, Header header) throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
             HttpGet httpGet = new HttpGet(url);
