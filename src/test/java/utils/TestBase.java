@@ -27,8 +27,9 @@ public class TestBase {
 
         if(driver == null) {
             if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
-                //ChromeOptions o = new ChromeOptions();
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless");
+                driver = new ChromeDriver(options);
                 driver.manage().window().maximize();
             }
             if(prop.getProperty("browser")=="firfox")

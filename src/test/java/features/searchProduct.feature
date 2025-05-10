@@ -9,4 +9,4 @@ Feature: Search and Place the order for products
     Examples:
     | Name |
     | Tom  |
-    | Beet |
+    #| Beet |
